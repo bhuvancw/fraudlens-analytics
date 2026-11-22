@@ -1,0 +1,34 @@
+cat > .gitignore << 'EOF'
+# Data: never commit (keep folders only)
+data/raw/*
+data/interim/*
+data/processed/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+
+# Secrets and local settings
+.env
+*.key
+*.pem
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+*.egg-info/
+
+# SQL Server files
+*.mdf
+*.ldf
+*.bak
+
+# Logs and OS/editor files
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+EOF
