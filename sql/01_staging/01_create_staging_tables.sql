@@ -5,6 +5,7 @@ GO
 
 IF OBJECT_ID('stg.users_raw', 'U') IS NULL
 CREATE TABLE stg.users_raw (
+    row_id                    INT IDENTITY(0,1) NOT NULL,
     person                    VARCHAR(100) NULL,
     current_age               VARCHAR(10)  NULL,
     retirement_age            VARCHAR(10)  NULL,
@@ -50,6 +51,7 @@ GO
 
 IF OBJECT_ID('stg.card_transaction_raw', 'U') IS NULL
 CREATE TABLE stg.card_transaction_raw (
+    row_id         BIGINT IDENTITY(1,1) NOT NULL,
     user_id        VARCHAR(10)  NULL,
     card_index     VARCHAR(10)  NULL,
     txn_year       VARCHAR(10)  NULL,
